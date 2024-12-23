@@ -1,15 +1,17 @@
 
-// import Image from 'next/image';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 // search UK, Europe, America, Asia and West Africa country
 
 import Logo from '@/app/assets/img/logo.png';
+import tranferImg from '@/app/assets/img/bgRemTransfer1.png'
+import transferImg2 from '@/app/assets/img/transfer.png'
 
 const transfers = [
-    { text: "International Funds Transfer", logo: Logo, href: "/account/ift"},
-    { text: "Local Funds Transfer", logo: Logo, href: "/account/ftransfer/lft"},
-    { text: "Telex Funds Transfer", logo: Logo, href: "/account/tft"},
+    { text: "International Funds Transfer", logo: tranferImg, href: "/account/ift"},
+    { text: "Local Funds Transfer", logo: transferImg2, href: "/account/ftransfer/lft"},
+    { text: "Telex Funds Transfer", logo: tranferImg, href: "/account/tft"},
 ]
 
 export default function Transfer({ session, user }: any) {
@@ -24,9 +26,10 @@ export default function Transfer({ session, user }: any) {
                 {
                     transfers.map((item) => (
                         <div key={item.text} className="bg-white text-center rounded-md p-8 min-h-[20vh] min-w-[20vw] h-[auto] transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                <Image className='w-[50%] lg:w-[25%] h-[auto] transform translate-x-[50%] lg:translate-x-[150%]' alt={item.text} src={item.logo} />
                                 <h1 className='text-center'>{item.text}</h1>
                                 <div onClick={() => { router.push(item.href)}} className='font-semibold cursor-pointer inline-block px-6 py-3 bg-green-500 rounded-md mt-4'>Make Transfer</div>
-                            </div>
+                        </div>
                     ))
                 }
             </div>
