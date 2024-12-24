@@ -1,9 +1,8 @@
 "use client"
 import React from "react"
 import { signOut, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 
 import { SignOut, Cancel, Menu } from "@/app/assets/icons/icons";
 import { useAsyncReducer } from "@/app/assets/hooks/useAsyncReducer";
@@ -58,6 +57,8 @@ export default function Account({
   }>) {
     // console.log()
     const router = useRouter();
+    const pathname = usePathname();
+    const path: String = pathname.split('/')[2];
     const [ dataArgument, store ] = useStorage( );
     const { data: session, status: sessionStatus } = useSession();
     const [ ip, setIP ] = React.useState('')
@@ -66,12 +67,10 @@ export default function Account({
         return {} as User
     })
     const [ active, setActive ] = React.useState(0)
-    const path = useSearchParams();
     // const [ ip, _D_setIP ]: any = useAsyncReducer( reducer, '');
     // _D_setIP(getUserIp) -- getUserIP will recieve dispatch
     
     React.useEffect(() => {
-        console.log(router)
 
         if(sessionStatus !== "authenticated"){
             router.push("/login");
@@ -150,16 +149,16 @@ export default function Account({
                         <li
                             key={item.key}
                             onClick={() => {
-                                setActive(index)
-
-                                if(index !== 0){
-                                    router.push(`/account/${item.key}`)
-                                }else if(index === 0){
+                                if(item.key === 'dashboard') {
                                     router.push(`/account`)
+                                    return;
+                                }
+                                if(item.key !== path){
+                                    router.push(`/account/${item.key}`)
                                 }
                         }}
                         className={`px-6 py-3 lg:px-3 py:1 cursor-pointer flex items-center hover:bg-gray-700 ${
-                            index === active ? "bg-gray-700 shadow-md" : ""
+                            item.key === path ? "bg-gray-700 shadow-md" : ""
                         }`}
                         >
                             <span className="min-h-6 min-w-6 w-6 h-6">{item.icon}</span>
