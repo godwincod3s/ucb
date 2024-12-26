@@ -41,3 +41,9 @@ https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-
 
 https://www.geeksforgeeks.org/introduction-of-ethereum-testnets/
 https://docs.cardano.org/developer-resources/welcome#smart-contracts
+https://web3.career/learn-web3/full-web3-tutorial-smart-contracts-solidity-javascript
+https://blog.logrocket.com/interacting-smart-contracts-via-nodejs-api/
+algoTrading ---- https://www.youtube.com/watch?v=9Y3yaoi9rUQ&t=1s
+https://www.bing.com/images/search?q=world+and+money+transfer+icons&form=IQFRML&first=1&cw=1304&ch=741
+https://opensea.io/login?referrer=%2Fstudio%2Fmint%3Fref%3Dnav
+https://portfolio.metamask.io/explore/nfts
