@@ -38,3 +38,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 https://www.geeksforgeeks.org/bitcoin-price-prediction-using-machine-learning-in-python/
 https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-be59-724526e3c3d7.gif
+
+https://www.geeksforgeeks.org/introduction-of-ethereum-testnets/
+https://docs.cardano.org/developer-resources/welcome#smart-contracts
