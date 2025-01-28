@@ -7,7 +7,7 @@ export default function Register() {
 
 
     const register = async () => {
-        const email = "miller.guuru@gmail.com" //e.target[0].value;
+        const email = "miller.guuru@gmail.com" //e.target[0].value;0040066130
         const password = "@J0hnD30!ucb"//e.target[1].value;
         const fullName = "Miller Gee"
         

@@ -150,7 +150,7 @@ export default function Login() {
 
                     <div className="w-full">
                         <h2 className="text-center bg-[#00dfc6] py-4">Customer Login</h2>
-                        <div className="flex flex-col gap-4 my-8 mx-4">
+                        <div className="flex flex-col gap-4 my-8 mx-4 text-[#000]">
 
                             <input className={` p-2 ${ (mode === 'otp' ? 'block' : 'hidden')}`} onChange={(e) => setOtp(+e.target.value)}  placeholder="2FA PIN" />
                             <input className={`p-2 ${ (mode === 'login' ? 'block' : 'hidden')} `} name="account" type="text" placeholder="Enter account number" onChange={setLoginData} />
