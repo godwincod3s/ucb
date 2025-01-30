@@ -36,9 +36,11 @@ const authOptions: NextAuthOptions = {
                         )
                         if(isPasswordCorrect) {
                             return user;
+                        }else{
+                            throw new Error('Password is incorrect');
                         }
                     }else{
-                        throw new Error('Email does not exist');
+                        throw new Error('Account number is not found');
                     }
 
                 } catch (err: any){ 

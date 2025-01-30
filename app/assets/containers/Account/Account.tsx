@@ -75,12 +75,13 @@ export default function Account({
         if(sessionStatus !== "authenticated"){
             router.push("/login");
         }
-        const IP: string = store('get', 'IP');
+        const IP: string = store('get', 'IP'); //returns object if the IP is not set
         setIP(IP)
         
         const USER: any = store('get', 'user')
         setUser(USER)
-        if(IP.length < 1) getUserIP();
+
+        if(typeof(IP) === 'object') getUserIP();
 
         
     }, [session])
@@ -111,7 +112,7 @@ export default function Account({
       
 
     return sessionStatus === "authenticated" ? (
-    <div className="flex flex-col">
+    <div className="flex flex-col text-[#000]">
         <div className="bg-[#333] text-white fixed w-[100vw] z-20">
             <div className="flex flex-row justify-around p-2">
                 <h1 className="font-bold">{getGreeting() + ' ! ' + session?.user?.name }</h1>

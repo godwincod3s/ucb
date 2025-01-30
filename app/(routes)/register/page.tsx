@@ -7,9 +7,9 @@ export default function Register() {
 
 
     const register = async () => {
-        const email = "miller.guuru@gmail.com" //e.target[0].value;0040066130
-        const password = "@J0hnD30!ucb"//e.target[1].value;
-        const fullName = "Miller Gee"
+        const email = "rachealonyi.dev@gmail.com" //e.target[0].value;0040066130
+        const password = "@Nema!ucb"//e.target[1].value; @J0hnD30!ucb
+        const fullName = "Chris Nema"
         
         const res = await axios.post('/api/register', {
             fullName,
